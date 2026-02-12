@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Config SPA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <ul class="sidebar">
+    <li data-section="initdevicesetup" class="active">Basic Config</li>
+    <div class="q">|</div>
+    <li data-section="int">Interface</li>
+    <div class="q">|</div>
+    <li data-section="notifications">Notifications</li>
+  </ul>
+ 
+  <div id="config-content"></div>
+  <button id="saveBtn"> [ ⚙ ] generate config</button>
+   <!-- Result Popup -->
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h3>Generated Configuration</h3>
+      <pre id="configOutput"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
