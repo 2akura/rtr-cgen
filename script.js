@@ -50,7 +50,7 @@ const sections = {
 
 const content = document.getElementById("config-content");
 const sidebarItems = document.querySelectorAll(".sidebar li");
-const glider = document.querySelector(".glider");
+
 
 
 function renderSection(section) {
@@ -58,7 +58,7 @@ function renderSection(section) {
 
   // move glider to clicked section
   const index = Array.from(sidebarItems).findIndex(li => li.dataset.section === section);
-  if(glider) glider.style.transform = `translateY(${index * 40}px)`; // adjust 40px to your li height
+  
 
   // init inputs
   if(section === "initdevicesetup") {
@@ -247,8 +247,6 @@ sidebarItems.forEach((li, index) => {
     sidebarItems.forEach(i => i.classList.remove("active"));
     li.classList.add("active");
 
-    // move glider
-    glider.style.transform = `translateY(${index * 100}%)`;
   });
 });
 
